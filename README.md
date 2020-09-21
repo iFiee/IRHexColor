@@ -21,8 +21,12 @@ set cache count limit
 IRColor.updateCache(countLimit: 100)
 ```
 
-# CocoaPods
+# Installation
+## CocoaPods
 
 ```bash
 pod 'IRHexColor'
 ```
+
+## Manually
+Drag and drop IRHexColor.swift file into your project
