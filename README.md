@@ -10,19 +10,19 @@ A convenient way to convert hex strings to UIColor or NSColor. IRHexColor suppor
 # Examples
 
 ```swift
-let red = IRColor.hexColor("FF0000")
-let green = IRColor.hexColor("#00FF00")
-let blue = IRColor.hexColor("0000FF")
+let red = UIColor.hexColor("FF0000")
+let green = UIColor.hexColor("#00FF00")
+let blue = UIColor.hexColor("0000FF")
 
 // ARGB hex string
-let aquaAlpha = IRColor.hexColor("#10D4F2E7")
-let yellowAlpha = IRColor.hexColor("08FFFF00")
+let aquaAlpha = UIColor.hexColor("#10D4F2E7")
+let yellowAlpha = UIColor.hexColor("08FFFF00")
 ```
 
 set cache count limit
 
 ```swift
-IRColor.updateCache(countLimit: 100)
+UIColor.updateCache(countLimit: 100)
 ```
 
 # Installation
