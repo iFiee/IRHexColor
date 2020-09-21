@@ -1,4 +1,8 @@
 # IRHexColor
+![CocoaPods Version](https://img.shields.io/cocoapods/v/IRHexColor.svg?style=flat)
+[![License](https://img.shields.io/github/license/zhiyongzou/IRHexColor.svg?style=flat)](https://github.com/zhiyongzou/IRHexColor/blob/master/LICENSE)
+[![HitCount](http://hits.dwyl.io/zhiyongzou/IRHexColor.svg)](http://hits.dwyl.io/zhiyongzou/IRHexColor)
+
 A convenient way to convert hex strings to UIColor or NSColor. IRHexColor support RGB and ARGB hex strings.
 
 > NOTE: IRHexColor will cache color for reusing.
