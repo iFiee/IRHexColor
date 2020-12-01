@@ -66,9 +66,6 @@ public extension IRColor {
         
         // hex color from cache
         if let cacheColor = self.IRHexColorCache.object(forKey: hexString as NSString) {
-#if DEBUG
-            print("[IRHexColor] Cache Color: " ,cacheColor.withAlphaComponent(resultAlpha))
-#endif
             return cacheColor.withAlphaComponent(resultAlpha)
         }
         
@@ -89,10 +86,6 @@ public extension IRColor {
         #endif
         
         self.IRHexColorCache.setObject(resultColor, forKey: hexString as NSString)
-        
-#if DEBUG
-        print("[IRHexColor] Color: \(resultColor) Hex string: \(resultHex) alpha: \(resultAlpha)")
-#endif
         
         return resultColor
     }
