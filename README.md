@@ -3,8 +3,7 @@
 [![License](https://img.shields.io/github/license/zhiyongzou/IRHexColor.svg?style=flat)](https://github.com/zhiyongzou/IRHexColor/blob/master/LICENSE)
 
 A convenient way to convert hex strings to UIColor or NSColor. IRHexColor support RGB and ARGB hex strings.
-
-> NOTE: IRHexColor will cache color for reusing.
+In addition, **IRHexColor will cache hex color for reusing which can improve performance.**
 
 # Examples
 
@@ -18,10 +17,11 @@ let aquaAlpha = UIColor.hexColor("#10D4F2E7")
 let yellowAlpha = UIColor.hexColor("08FFFF00")
 ```
 
-set cache count limit
+Set cache count limit
 
 ```swift
-UIColor.updateCache(countLimit: 100)
+// default is 100
+IRColor.cacheCountLimit = 200
 ```
 
 # Installation
