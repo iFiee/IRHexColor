@@ -12,9 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        IRColor.cacheCountLimit = 200
+        view.backgroundColor = .hexColor("668899")
     }
-
 
 }
 

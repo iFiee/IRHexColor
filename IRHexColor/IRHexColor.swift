@@ -16,6 +16,16 @@
 
 public extension IRColor {
     
+    /// Default count limit: 100
+    class var cacheCountLimit: Int {
+        set {
+            IRHexColorCache.countLimit = newValue
+        }
+        get {
+            return IRHexColorCache.countLimit
+        }
+    }
+    
     private class func hexToUInt64(_ hexString: String) -> UInt64 {
         var result: UInt64 = 0
         guard Scanner(string: hexString).scanHexInt64(&result) else {
@@ -29,10 +39,6 @@ public extension IRColor {
         cache.countLimit = 100;
         return cache
     }()
-    
-    class func updateCache(countLimit: Int) {
-        IRHexColorCache.countLimit = countLimit
-    }
     
     class func hexColor(_ hexString: String) -> IRColor {
         return self.hexColor(hexString: hexString, alpha: 1.0)
@@ -65,7 +71,7 @@ public extension IRColor {
         }
         
         // hex color from cache
-        if let cacheColor = self.IRHexColorCache.object(forKey: hexString as NSString) {
+        if let cacheColor = self.IRHexColorCache.object(forKey: resultHex as NSString) {
             return cacheColor.withAlphaComponent(resultAlpha)
         }
         
