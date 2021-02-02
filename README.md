@@ -21,7 +21,7 @@ Set cache count limit
 
 ```swift
 // default is 100
-IRColor.cacheCountLimit = 200
+UIColor.cacheCountLimit = 200
 ```
 
 # Installation
